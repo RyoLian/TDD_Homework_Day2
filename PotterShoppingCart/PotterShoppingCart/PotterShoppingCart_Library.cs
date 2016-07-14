@@ -1,32 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace PotterShoppingCart_Library
+﻿namespace PotterShoppingCart_Library
 {
     public class PotterShoppingCart
     {
+        private int[] _FeeRate = new int[] { 100, 95, 90, 80 };
+
         public int CalTotalPay(int First, int Second, int third, int forth)
         {
             var TotalPay = 0;
-            if (First > 0 && Second > 0 && third > 0 && forth > 0)
+
+            int[] list = { First, Second, third, forth };
+            int kind = 0;
+            var TotalCount = First + Second + third + forth;
+
+            for (int i = 0; i <= list.Length - 1; i++)
             {
-                TotalPay = (First + Second + third + forth) * 80; // 100*0.8 = 80
+                if (list[i] > 0)
+                {
+                    kind++;
+                }
             }
-            else if (First > 0 && Second > 0 && third > 0)
-            {
-                TotalPay = (First + Second + third) * 90; // 100*0.9 = 90
-            }
-            else if (First > 0 && Second > 0 || Second > 0 && third > 0 || First > 0 && third > 0)
-            {
-                TotalPay = (First + Second) * 95; // 100*0.95 = 95
-            }
-            else
-            {
-                TotalPay = (First + Second) * 100;
-            }
-            return TotalPay;
+            return TotalPay = TotalCount * _FeeRate[kind - 1];
         }
     }
 }

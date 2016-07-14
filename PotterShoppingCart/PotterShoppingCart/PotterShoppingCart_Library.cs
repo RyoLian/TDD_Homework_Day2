@@ -4,7 +4,7 @@
     {
         private int[] _FeeRate = new int[] { 100, 95, 90, 80 };
 
-        public int CalTotalPay(int First, int Second, int third, int forth)
+        public int CalTotalPay(int First, int Second, int third, int forth, int fifth)
         {
             var TotalPay = 0;
 

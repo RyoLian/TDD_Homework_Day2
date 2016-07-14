@@ -59,6 +59,12 @@
   <ItemGroup>
     <Content Include="User Story.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PotterShoppingCart\PotterShoppingCart.csproj">
+      <Project>{973B052F-C02E-4C06-9C39-607D2AB45E50}</Project>
+      <Name>PotterShoppingCart</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

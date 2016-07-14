@@ -7,19 +7,25 @@
         public int CalTotalPay(int First, int Second, int third, int forth, int fifth)
         {
             var TotalPay = 0;
-
             int[] list = { First, Second, third, forth, fifth };
-            int kind = 0;
+            int kind = 1;
             var TotalCount = First + Second + third + forth + fifth;
 
-            for (int i = 0; i <= list.Length - 1; i++)
+            while (kind > 0)
             {
-                if (list[i] > 0)
+                kind = 0;
+                for (int i = 0; i <= list.Length - 1; i++)
                 {
-                    kind++;
+                    if (list[i] > 0)
+                    {
+                        kind += 1;
+                        list[i] -= 1;
+                    }
                 }
+                if (kind > 0)
+                    TotalPay += kind * _FeeRate[kind - 1];
             }
-            return TotalPay = TotalCount * _FeeRate[kind - 1];
+            return TotalPay;
         }
     }
 }

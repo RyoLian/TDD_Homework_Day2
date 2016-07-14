@@ -14,7 +14,7 @@ namespace PotterShoppingCartTests
             var Buy = new PotterShoppingCart();
 
             //act
-            var actual = Buy.CalTotalPay(1);
+            var actual = Buy.CalTotalPay(1,0);
 
             //assert
             var expected = 100;
@@ -29,7 +29,7 @@ namespace PotterShoppingCartTests
             var Buy = new PotterShoppingCart();
 
             //act
-            var actual = Buy.CalTotalPay(1);
+            var actual = Buy.CalTotalPay(1,1);
 
             //assert
             var expected = 190;

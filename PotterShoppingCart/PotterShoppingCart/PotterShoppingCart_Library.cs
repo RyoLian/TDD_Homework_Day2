@@ -7,10 +7,17 @@ namespace PotterShoppingCart_Library
 {
     public class PotterShoppingCart
     {
-        public int CalTotalPay(int First)
+        public int CalTotalPay(int First, int Second)
         {
             var TotalPay = 0;
-            TotalPay = First * 100;
+            if (First > 0 && Second > 0)
+            {
+                TotalPay = (First + Second) * 95; // 100*0.95 = 95
+            }
+            else
+            {
+                TotalPay = (First + Second) * 100;
+            }
             return TotalPay;
         }
     }

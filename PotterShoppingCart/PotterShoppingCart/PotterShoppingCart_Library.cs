@@ -10,7 +10,11 @@ namespace PotterShoppingCart_Library
         public int CalTotalPay(int First, int Second, int third)
         {
             var TotalPay = 0;
-            if (First > 0 && Second > 0)
+            if (First > 0 && Second > 0 && third > 0)
+            {
+                TotalPay = (First + Second + third) * 90; // 100*0.9 = 90
+            }
+            else if (First > 0 && Second > 0 || Second > 0 && third > 0 || First > 0 && third > 0)
             {
                 TotalPay = (First + Second) * 95; // 100*0.95 = 95
             }

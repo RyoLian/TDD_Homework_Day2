@@ -14,7 +14,7 @@ namespace PotterShoppingCartTests
             var Buy = new PotterShoppingCart();
 
             //act
-            var actual = Buy.CalTotalPay(1, 0, 0);
+            var actual = Buy.CalTotalPay(1, 0, 0, 0);
 
             //assert
             var expected = 100;
@@ -29,7 +29,7 @@ namespace PotterShoppingCartTests
             var Buy = new PotterShoppingCart();
 
             //act
-            var actual = Buy.CalTotalPay(1, 1, 0);
+            var actual = Buy.CalTotalPay(1, 1, 0, 0);
 
             //assert
             var expected = 190;
@@ -44,10 +44,26 @@ namespace PotterShoppingCartTests
             var Buy = new PotterShoppingCart();
 
             //act
-            var actual = Buy.CalTotalPay(1, 1, 1);
+            var actual = Buy.CalTotalPay(1, 1, 1, 0);
 
             //assert
             var expected = 270;
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
+        [TestMethod]
+        public void PotterShoppingCartTests_一二三四集各買了一本_價格應為_320()
+        {
+            //arrange
+            var Buy = new PotterShoppingCart();
+
+            //act
+            var actual = Buy.CalTotalPay(1, 1, 1, 1);
+
+            //assert
+            var expected = 320;
             Assert.AreEqual(expected, actual);
 
         }

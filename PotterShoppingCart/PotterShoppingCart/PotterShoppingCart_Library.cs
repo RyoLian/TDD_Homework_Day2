@@ -7,7 +7,7 @@ namespace PotterShoppingCart_Library
 {
     public class PotterShoppingCart
     {
-        public int CalTotalPay(int First, int Second, int third)
+        public int CalTotalPay(int First, int Second, int third, int forth)
         {
             var TotalPay = 0;
             if (First > 0 && Second > 0 && third > 0)

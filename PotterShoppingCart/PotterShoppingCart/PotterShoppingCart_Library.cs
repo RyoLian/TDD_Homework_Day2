@@ -11,6 +11,11 @@
             int kind = 1;
             var TotalCount = First + Second + third + forth + fifth;
 
+            return Calculator(ref TotalPay, list, ref kind);
+        }
+
+        private int Calculator(ref int TotalPay, int[] list, ref int kind)
+        {
             while (kind > 0)
             {
                 kind = 0;

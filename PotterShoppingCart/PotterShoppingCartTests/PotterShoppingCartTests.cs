@@ -96,5 +96,19 @@ namespace PotterShoppingCartTests
             Assert.AreEqual(expected, actual);
 
         }
+        [TestMethod]
+        public void PotterShoppingCartTests_第一集買了一本_第二三集各買了兩本_價格應為_460()
+        {
+            //arrange
+            var Buy = new PotterShoppingCart();
+
+            //act
+            var actual = Buy.CalTotalPay(1, 2, 2, 0, 0);
+
+            //assert
+            var expected = 460;
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }
